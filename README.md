@@ -17,4 +17,4 @@ cd /localrepo
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
-python scraper.py 
+python scraper.py

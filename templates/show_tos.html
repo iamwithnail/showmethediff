@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_url') }}" method=post class=add-url>
+      <dl>
+        <dt>URL:
+        <dd><input type=text size=30 name=title>
+        <dt>Contents:
+        <dd><textarea name=url rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% for terms in tos %}
+    <li><h2>{{ terms.title }}</h2>{{ terms.url|safe }}
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
