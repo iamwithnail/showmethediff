@@ -29,6 +29,7 @@ def teardown_request(exception):
 
 from contextlib import closing
 from sqlalchemy.exc import OperationalError
+
 def init_db():
     try:
         with closing(connect_db()) as db:

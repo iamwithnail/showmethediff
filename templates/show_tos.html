@@ -1,13 +1,14 @@
 {% extends "layout.html" %}
 {% block body %}
   {% if session.logged_in %}
-    <form action="{{ url_for('add_url') }}" method=post class=add-url>
+    <form action="{{ url_for('add_tos') }}" method=post class=add-tos>
       <dl>
         <dt>URL:
         <dd><input type=text size=30 name=title>
         <dt>Contents:
         <dd><textarea name=url rows=5 cols=40></textarea>
-        <dd><input type=submit value=Share>
+          <dd><input type=date name=date_scraped></dd>
+        <dd><input type=submit value=Add>
       </dl>
     </form>
   {% endif %}
