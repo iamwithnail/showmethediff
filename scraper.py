@@ -28,16 +28,12 @@ def teardown_request(exception):
 
 
 from contextlib import closing
-from sqlalchemy.exc import OperationalError
 
 def init_db():
-    try:
-        with closing(connect_db()) as db:
-            with app.open_resource('schema.sql', mode='r') as f:
-                db.cursor().executescript(f.read())
-            db.commit()
-    except OperationalError:
-        print "Database already initialised, exiting"
+    with closing(connect_db()) as db:
+        with app.open_resource('schema.sql', mode='r') as f:
+            db.cursor().executescript(f.read())
+        db.commit()
 
 @app.route('/urls')
 def show_url():
