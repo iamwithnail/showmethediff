@@ -20,9 +20,11 @@ pip install -r requirements.txt
 python scraper.py
 
 Immediate 'to-do' list:
-Swap out SQLite3 for PostGres
-Set up Google-Diff-Match-Patch API call https://code.google.com/p/google-diff-match-patch/
-Probably implement django_rq for queuing read jobs
-Cron job to start the queue
-Parse the HTML to readable format
+<ul>
+</li>Swap out SQLite3 for PostGres</li>
+</li>Set up Google-Diff-Match-Patch API call https://code.google.com/p/google-diff-match-patch/</li>
+</li>Probably implement django_rq for queuing read jobs</li>
+</li>Cron job to start the queue</li>
+</li>Parse the HTML to readable format</li>
+</ul>
 
