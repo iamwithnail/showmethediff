@@ -10,7 +10,7 @@ Contributions on flow/structure welcome...
   
 #Instructions:
 
-*Clone into local repo.
+* Clone into local repo.
 *Install pip - it'll make your life easier. http://pip.readthedocs.org/en/stable/installing/
 *Install virtualenv if not already available.
 *cd /localrepo
